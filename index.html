@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">    
+            <img src="D.jpg" alt="Diya" height="50px" width="50px">
+            <span class="name"><h1>Diya Vora</h1></span>
+            <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">=</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#Contact">Contact</a>
+                    <a href="#AboutMe">AboutMe</a>  
+                    <a href="#Education">Education</a>  
+                    <a href="#Skills">Skills</a>    
+                </div>
+            </div>    
+        </div>
+    </header>
+    <section>
+        <div id="Contact">
+            <h1>Contact Me</h1>
+            <table id="table">
+                <tr>
+                    <td><b>LinkedIn : </b></td>
+                    <td><a href="https://www.linkedin.com/in/diya-vora-9b8973306"><i>https://www.linkedin.com/in/diya-vora-9b8973306</i></a></td>
+                </tr>
+                <tr>
+                    <td><b>Email : </b></td>
+                    <td><a href="https://www.gmail.com"><i>www.gmail.com</i></a></td>
+                </tr>
+                <tr>
+                    <td><b>GitHub : </b></td>
+                    <td><a href="https://github.com/diyavora2208"><i>https://github.com/diyavora2208</i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="AboutMe">
+            <h1>About Me</h1>
+            <table>
+                <tr>
+                    <td><span><img src="D.jpg" alt="Diya" height="200px" width="200px"></span></td>
+                    <td><p id="Me">Right now I am pursuing my bachelor's degree in gujarat technology university in Computer Engineering.My journey in web development has been a continuous process of learning and growth. From my first encounter with HTML and CSS, I was captivated by the ability to create functional and visually appealing websites from scratch. I constantly challenge myself with new projects, participate in coding bootcamps, and stay updated with the latest industry trends through online courses and by taking some internship.</p></td>
+                </tr>
+            </table>               
+        </div>
+        <div id="Education">
+            <h1>Education</h1>
+            <div id="SSC">
+                <h3>SSC</h3>
+                <ul>
+                    <li>Shree Swaninarayn Gurukul, Bhavnagar</li>
+                    <li>Percentage : 91%</li>
+                </ul>
+            </div>
+            <div id="HSC">
+                <h3>HSC</h3>
+                <ul>
+                    <li>Shree Swaninarayn Gurukul, Bhavnagar</li>
+                    <li>Percentage : 90%</li>
+                </ul>
+            </div>
+            <div id="bachelor">
+                <h3>Persuing Bachelor's Degree</h3>
+                <ul>
+                    <li>Gujarat technological University</li>
+                    <li>B.E. sem 4</li>
+                    <li>cpi : 9.61</li>
+                </ul>
+            </div>            
+        </div>
+        <div id="Skills">
+            <h1>Skills</h1>
+            <ul id="Skill">
+                <li>C</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Experience</h1>
+            <p>Currently, I am gaining my first experince in Ignite as Intern.</p>
+        </div>
+    </section>
+    <script>
+    /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown menu if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+
+          <style>
+            /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4a90e2;
+    color: white;
+    /* padding: 20px 0; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2cm;
+    padding-right: 2cm;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+.container img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3b78d4;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #4a90e2;
+}
+
+#AboutMe table, #table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#AboutMe table img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+#Skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#Skills ul li {
+    background: #4a90e2;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#Contact a, #table a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#Contact a:hover, #table a:hover {
+    color: #3b78d4;
+}
+
+#Me {
+    font-size: larger;
+    text-align: left;
+}
+
+/* Experience Section */
+section div h2 {
+    margin-top: 20px;
+}
+
+section div p {
+    background: #f4f4f9;
+    padding: 10px;
+    border-left: 5px solid #4a90e2;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: larger;
+}
+
+          </style>
+</body>
+</html>
